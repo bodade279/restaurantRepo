@@ -9,8 +9,8 @@ import InitialScreen from '../components/src/screen/initialPage/InitialScreen'
 import { useColorScheme } from '@/hooks/useColorScheme';
 import LoginScreen from '../components/src/screen/loginScreen/LoginPage'
 import TellMorePage from '../components/src/screen/tellMorePage/TellMorePage'
-// LoginScreen tellMorePage
-// Prevent the splash screen from auto-hiding before asset loading is complete.
+import TellMoreProfile from '../components/src/screen/tellMoreProfile/TellMoreProfile'
+import AgePage from '../components/src/screen/agePage/AgePage'
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -32,7 +32,7 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <TellMorePage/>
+      <AgePage/>
     </ThemeProvider>
   );
 }
