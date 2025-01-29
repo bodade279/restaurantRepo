@@ -5,10 +5,10 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
-import LoginScreen from '../components/src/screen/LoginScreen/LoginScreen'
+import OtpScreen from '../components/src/screen/Otp/OtpScreen'
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { View } from 'react-native';
-import InitialScreen from '../components/src/screen/initialScreen/InitialScreen'
+
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -31,7 +31,7 @@ export default function RootLayout() {
 
   return (
     <View>
-      <InitialScreen />
+     <OtpScreen/>
     </View>
   );
 }
