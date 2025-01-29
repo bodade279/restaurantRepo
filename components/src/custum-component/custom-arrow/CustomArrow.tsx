@@ -6,18 +6,18 @@ import {
 } from 'react-native-responsive-screen';
 
 interface CustomArrowProps {
-  onPress?: () => void; 
-  direction?: 'left' | 'right' | 'up' | 'down'; 
-  right: boolean; 
-  left: number; 
-  leftarrow: boolean; 
+  onPress?: () => void;
+  direction?: 'left' | 'right' | 'up' | 'down';
+  right: boolean;
+  left: number;
+  leftarrow: boolean;
   marginBottom?: number;
-  marginTop?: number; 
-  width?: number; 
-  height?: number; 
-  tintcolor?: string; 
-  cl?: boolean; 
-  navigation?: any; 
+  marginTop?: number;
+  width?: number;
+  height?: number;
+  tintcolor?: string;
+  cl?: boolean;
+  navigation?: any;
 }
 
 const CustomArrow: React.FC<CustomArrowProps> = ({
@@ -25,18 +25,18 @@ const CustomArrow: React.FC<CustomArrowProps> = ({
   right,
   leftarrow,
   cl,
-  navigation, 
+  navigation,
 }) => {
   return (
     <SafeAreaView style={styles.container}>
       {leftarrow && (
-        <TouchableOpacity style={styles.arrowButton}  onPress={() => navigation?.goBack()} >
+        <TouchableOpacity style={styles.arrowButton} onPress={() => navigation?.goBack()} >
           <Icon name="arrow-left" size={wp('5.6458%')} color={cl ? 'black' : 'white'} />
         </TouchableOpacity>
       )}
 
       {right && (
-        <TouchableOpacity style={styles.arrowButton}  onPress={() => navigation?.goBack()} >
+        <TouchableOpacity style={styles.arrowButton} onPress={() => navigation?.goBack()} >
           <Icon name="arrow-right" size={wp('4.6458%')} color={cl ? '#1269EB' : 'white'} />
         </TouchableOpacity>
       )}
@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   arrowButton: {
-    padding: 0, 
-    backgroundColor: 'transparent', 
+    padding: 0,
+    backgroundColor: 'transparent',
   },
 });
 
