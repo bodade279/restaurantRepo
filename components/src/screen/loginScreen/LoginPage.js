@@ -8,15 +8,19 @@ import {
   Image,
 } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
-
+import { MaterialIcons } from '@expo/vector-icons'; 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'; 
 export default function LoginScreen() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [countryCode, setCountryCode] = useState('+1');
 
   return (
     <View style={styles.container}>
-      {/* Logo */}
-      <Text style={styles.logo}>riice</Text>
+     
+     <View style={{marginTop:31}}>
+     <Text style={styles.logo}>riice</Text>
+     </View>
+     
 
       {/* Subtitle */}
       <Text style={styles.subtitle}>
@@ -38,6 +42,8 @@ export default function LoginScreen() {
             inputAndroid: styles.pickerInput,
           }}
           useNativeAndroidPickerStyle={false}
+          
+          Icon={() => <MaterialIcons name="keyboard-arrow-down" size={24} color="#060505" style={styles.icon} />}
         />
       </View>
 
@@ -51,8 +57,10 @@ export default function LoginScreen() {
       />
 
       {/* Don't have an account */}
-      <TouchableOpacity style={{marginTop:34}}>
-        <Text style={styles.accountLink}>Don’t have an account?</Text>
+      <TouchableOpacity style={{marginTop:34,flexDirection:'row',marginLeft:wp("47%")}}>
+      <Text style={styles.accountLink}>Don’t have an account?</Text>
+    <MaterialIcons name="keyboard-arrow-right" size={24} color='#007AFF' />
+      
       </TouchableOpacity>
 
       {/* Login Button */}
@@ -92,6 +100,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     backgroundColor: '#fff',
   },
+  icon: {
+    marginTop: 10,  // Adjust the position of the icon
+    marginRight: 10,  // Add spacing to the right of the icon
+  },
+
   logo: {
     fontSize: 36,
     fontWeight: 'bold',
@@ -109,13 +122,18 @@ const styles = StyleSheet.create({
     marginBottom: 27,
     borderWidth: 1,
     borderColor: '#ccc',
-    borderRadius: 8,
-    paddingHorizontal: 10,
-    marginTop:78
+    borderRadius: 10,
+    // paddingHorizontal: 10,
+    marginTop:78,
+    height: 48,
+    width:340,
+   
   },
   pickerInput: {
     fontSize: 16,
     paddingVertical: 12,
+    paddingLeft:10
+    
   },
   input: {
     height: 50,
@@ -124,22 +142,24 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 10,
     fontSize: 16,
-    marginBottom: 10,
+    // marginBottom: 10,
   },
   accountLink: {
     color: '#007AFF',
     textAlign: 'right',
+    fontSize:14
     // marginBottom: 20,
   },
   loginButton: {
     backgroundColor: '#007AFF',
-    height: 50,
-    borderRadius: 8,
+    height: 48,
+    width:340,
+    borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
     // marginBottom: 20,
-    marginTop:53,
-    marginBottom:76
+    marginTop:51,
+    marginBottom:78
   },
   loginButtonText: {
     color: '#fff',
@@ -149,7 +169,7 @@ const styles = StyleSheet.create({
   dividerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 20,
+    // marginVertical: 20,
   },
   divider: {
     flex: 1,
@@ -161,8 +181,9 @@ const styles = StyleSheet.create({
     color: '#666',
   },
   socialButton: {
-    height: 50,
-    borderRadius: 8,
+    height: 48,
+    width:340,
+    borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 10,
