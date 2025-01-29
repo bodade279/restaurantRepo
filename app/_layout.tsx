@@ -11,6 +11,7 @@ import LoginScreen from '../components/src/screen/loginScreen/LoginPage'
 import TellMorePage from '../components/src/screen/tellMorePage/TellMorePage'
 import AgeScreen from './../components/src/screen/AgeScreen/AgeScreen';
 import Otp from '@/components/src/screen/Otp/OtpScreen';
+import MobileNumberScreen from '@/components/src/screen/MobileNumber/MobileNumberScreen';
 // LoginScreen tellMorePage
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -35,8 +36,9 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       {/* <TellMorePage/> */}
-      <AgeScreen />
+      {/* <AgeScreen /> */}
       {/* <Otp /> */}
+      <MobileNumberScreen />
     </ThemeProvider>
   );
 }

@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: '#F7B603',
         width: wp('90%'),
-        height: hp('6%'),
+        height: hp('7%'),
         position: 'absolute',
         bottom: 50,
         paddingVertical: hp('1.5%'),
