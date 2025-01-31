@@ -52,7 +52,7 @@ export const ageStyles = {
     justifyContent: 'center',
     alignSelf: 'center',
     marginTop: hp('7.1247%'),
-  
+
   },
   input: {
     width: wp('89.3229%'),
@@ -60,9 +60,9 @@ export const ageStyles = {
     borderWidth: wp('0.2604%'),
     borderRadius: wp('4.1667%'),
     backgroundColor: '#232323',
-    fontFamily:'Manrope',
-    padding:wp('2.6042%'),
-  
+    fontFamily: 'Manrope',
+    padding: wp('2.6042%'),
+
   },
   textView1: {
     marginTop: hp('2.0356%'),
@@ -174,8 +174,8 @@ export const loginStyles = {
     flex: 1,
     height: hp('0.1272%'),
     backgroundColor: '#ccc',
-    marginRight:wp('6.5%'),
-    marginLeft:wp('6.5%'),
+    marginRight: wp('6.5%'),
+    marginLeft: wp('6.5%'),
   },
   orText: {
     marginHorizontal: wp('2.6042%'),
@@ -188,10 +188,10 @@ export const loginStyles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: hp('1.2723%'),
-    flexDirection:'row',
-    padding:wp('2.6042%'),
-    borderWidth:1,
-    borderColor:'#ccc'
+    flexDirection: 'row',
+    padding: wp('2.6042%'),
+    borderWidth: 1,
+    borderColor: '#ccc'
   },
   appleButton: {
     backgroundColor: '#060505',
@@ -207,6 +207,125 @@ export const loginStyles = {
     fontSize: wp('3.6458%'),
     textTransform: 'capitalize',
     fontFamily: 'Manrope',
-    fontWeight:'500'
+    fontWeight: '500'
   },
+}
+
+
+export const usernamestyle = {
+  container: {
+    // flex: 1,
+    height: '100%',
+    backgroundColor: "#fff",
+  },
+  scrollContent: {
+    paddingBottom: hp('12%')
+  },
+  main: {
+    marginTop: hp('5%'),
+    paddingLeft: wp('6.5%')
+  },
+  section: {
+    marginTop: hp('10%'),
+    alignItems: 'center',
+
+  },
+  titleText: {
+    fontSize: wp('6.5%'),
+    fontFamily: 'Manrope',
+    textAlign: 'center'
+  },
+  usernameText: {
+    fontSize: wp('8%'),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: hp('4%'),
+    fontFamily: 'Manrope',
+  },
+  changeText: {
+    fontSize: wp('4%'),
+    color: '#555',
+    textAlign: 'center',
+    marginTop: hp('0.5%'),
+    fontFamily: 'Manrope',
+  },
+  button: {
+    backgroundColor: '#F7B603',
+    width: wp('90%'),
+    height: hp('7%'),
+    position: 'absolute',
+    bottom: 50,
+    alignSelf: 'center',
+    paddingVertical: hp('1.5%'),
+    paddingHorizontal: wp('5%'),
+    borderRadius: wp('2%'),
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  buttonText: {
+    color: '#000',
+    fontSize: wp('4.5%'),
+    fontWeight: 'bold'
+  }
+};
+export const nameStyle = {
+  container: {
+    // flex: 1
+    height: '100%',
+    backgroundColor: "#fff",
+  },
+
+  scrollContent: {
+    paddingBottom: hp('5.0891%')
+  },
+  main: {
+    marginTop: hp('5.0891%'),
+    paddingLeft: wp('6.5104%')
+  },
+  subMain: {
+    marginTop: hp('20.1018%')
+  },
+  textView: {
+    fontSize: wp('3.25%'),
+    // textAlign: 'center',
+    marginTop: wp('6.25%'),
+    marginottom: wp('6.25%'),
+    fontFamily: 'Manrope',
+    color: '#060505',
+    opacity: 0.6,
+
+
+  },
+  textInputView: {
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginTop: hp('7.1247%')
+  },
+  input: {
+    width: wp('89.3229%'),
+    height: hp('7.1247%'),
+    borderWidth: wp('0.2604%'),
+    borderRadius: wp('4.1667%'),
+    paddingLeft: wp('5%'),
+    backgroundColor: '#232323',
+    marginTop: wp('4.25%'),
+    color: '#FFFFFF',
+
+  },
+  textView1: {
+    marginTop: hp('2.0356%'),
+    paddingLeft: wp('6.25%'),
+    paddingRight: wp('6.25%'),
+  },
+  text2: {
+    color: "#06050599",
+    fontSize: wp('4.1667%'),
+    fontFamily: 'Manrope',
+    textAlign: 'center'
+  },
+  touchableView: {
+    marginTop: hp('34.8601%'),
+    alignSelf: 'center',
+    justifyContent: 'center'
+  }
 }
