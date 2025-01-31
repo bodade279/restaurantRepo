@@ -274,11 +274,15 @@ export const nameStyle = {
     marginTop: hp('20.1018%')
   },
   textView: {
-    fontSize: wp('4.25%'),
+    fontSize: wp('3.25%'),
     // textAlign: 'center',
     marginTop: wp('6.25%'),
     marginottom: wp('6.25%'),
-    fontFamily: 'Manrope'
+    fontFamily: 'Manrope',
+    color: '#060505',
+    opacity: 0.6,
+
+
   },
   textInputView: {
     justifyContent: 'center',
@@ -293,6 +297,7 @@ export const nameStyle = {
     paddingLeft: wp('5%'),
     backgroundColor: '#232323',
     marginTop: wp('4.25%'),
+    color: '#FFFFFF',
 
   },
   textView1: {
