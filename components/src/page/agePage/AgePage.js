@@ -9,7 +9,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 
 export default function AgePage({navigation}) {
   const handleNavigation=()=>{
-    navigation.navigate('InitialScreen')
+    navigation.navigate('TellMorePage')
   }
 
   return (

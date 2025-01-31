@@ -13,7 +13,7 @@ const OtpPage = ({navigation}) => {
   };
 
   const handleNavigation=()=>{
-    navigation.navigate('AgePage')
+    navigation.navigate('NamePage')
   }
 
   return (

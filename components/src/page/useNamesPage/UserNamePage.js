@@ -4,7 +4,7 @@ import { usernamestyle } from '@/constants/styles/Styles';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import CustomArrow from '../../custum-component/custom-arrow/CustomArrow';
 
-export default function UserNamePage() {
+export default function UserNamePage({navigation}) {
     return (
         <View style={usernamestyle.container}>
             <ScrollView contentContainerStyle={usernamestyle.scrollContent}>
@@ -26,7 +26,7 @@ export default function UserNamePage() {
             </ScrollView>
 
             {/* Button at the bottom */}
-            <TouchableOpacity style={usernamestyle.button}>
+            <TouchableOpacity style={usernamestyle.button} onPress={() => navigation.navigate('AgePage')}>
                 <Text style={usernamestyle.buttonText}>Continue</Text>
             </TouchableOpacity>
         </View>

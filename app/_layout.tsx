@@ -35,13 +35,7 @@ export default function RootLayout() {
   }
 
   return (
-    <View>
-      {/* <OtpScreen /> */}
-      {/* <UserNamePage /> */}
-      {/* <AgePage /> */}
-      {/* <TellMorePage /> */}
-      <NamePage />
-    </View>
+   
     <NavigationIndependentTree>
 <RoutingPage/>
     </NavigationIndependentTree>

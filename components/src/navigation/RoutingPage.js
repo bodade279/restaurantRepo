@@ -7,6 +7,8 @@ import TellMorePage from '../page/tellMorePage/TellMorePage'
 import TellMoreProfile from '../page/tellMoreProfile/TellMoreProfile'
 import InitialScreen from '../page/initialPage/InitialScreen'
 import RefferalCode from '../page/refferal-code/RefferalCode'
+import UserNamePage from '../page/useNamesPage/UserNamePage';
+import NamePage from '../page/namePage/NamePage';
 const Routing =createStackNavigator();
 const RoutingPage = () => {
   return (
@@ -19,6 +21,8 @@ const RoutingPage = () => {
       <Routing.Screen name="TellMorePage" component={TellMorePage} options={{ headerShown: false }} />
       <Routing.Screen name="TellMoreProfile" component={TellMoreProfile} options={{ headerShown: false }} />
       <Routing.Screen name="RefferalCode" component={RefferalCode} options={{ headerShown: false }} />
+      <Routing.Screen name="UserNamePage" component={UserNamePage} options={{ headerShown: false }} />
+      <Routing.Screen name="NamePage" component={NamePage} options={{ headerShown: false }} />
       </Routing.Navigator>
   
   

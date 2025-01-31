@@ -43,7 +43,7 @@ const RefferalCode = ({ navigation }) => {
                 </View>
 
 
-                <TouchableOpacity style={{ marginTop: hp('45%') }}>
+                <TouchableOpacity style={{ marginTop: hp('39.6947%') }}>
                     <CustomButton
                         width={wp('88.5417%')}
                         height={hp('7.6336%')}

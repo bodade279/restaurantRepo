@@ -8,7 +8,7 @@ import CustomButton from '../../custom-component/custombutton/CustomButton';
 import CustomArrow from '../../custum-component/custom-arrow/CustomArrow';
 import { nameStyle } from '@/constants/styles/Styles';
 
-export default function NamePage() {
+export default function NamePage({navigation}) {
     return (
         <View style={nameStyle.container}>
             <ScrollView contentContainerStyle={nameStyle.scrollContent}>
@@ -52,6 +52,7 @@ export default function NamePage() {
                         textAlign={'center'}
                         fontSize={16}
                         color={"#000000"}
+                        onPress={() => navigation.navigate('UserNamePage')}
 
                     />
 
