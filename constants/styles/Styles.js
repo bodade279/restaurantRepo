@@ -30,7 +30,8 @@ export const customeButtonStyles = StyleSheet.create({
 
 export const ageStyles = {
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: '#fff',
   },
   scrollContent: {
     paddingBottom: hp('5.0891%')
@@ -50,14 +51,18 @@ export const ageStyles = {
   textInputView: {
     justifyContent: 'center',
     alignSelf: 'center',
-    marginTop: hp('7.1247%')
+    marginTop: hp('7.1247%'),
+  
   },
   input: {
     width: wp('89.3229%'),
     height: hp('7.1247%'),
     borderWidth: wp('0.2604%'),
     borderRadius: wp('4.1667%'),
-    backgroundColor: '#232323'
+    backgroundColor: '#232323',
+    fontFamily:'Manrope',
+    padding:wp('2.6042%'),
+  
   },
   textView1: {
     marginTop: hp('2.0356%'),
@@ -80,6 +85,7 @@ export const ageStyles = {
 export const loginStyles = {
   container: {
     flex: 1,
+    backgroundColor: '#fff',
 
   },
   main: {
@@ -168,6 +174,8 @@ export const loginStyles = {
     flex: 1,
     height: hp('0.1272%'),
     backgroundColor: '#ccc',
+    marginRight:wp('6.5%'),
+    marginLeft:wp('6.5%'),
   },
   orText: {
     marginHorizontal: wp('2.6042%'),
@@ -176,23 +184,29 @@ export const loginStyles = {
   socialButton: {
     height: hp('6.1069%'),
     width: wp('88.5417%'),
-    borderRadius: wp('2.6042%'),
-    justifyContent: 'center',
+    borderRadius: wp('4.1667%'),
+    justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: hp('1.2723%'),
+    flexDirection:'row',
+    padding:wp('2.6042%'),
+    borderWidth:1,
+    borderColor:'#ccc'
   },
   appleButton: {
-    backgroundColor: '#000',
+    backgroundColor: '#060505',
   },
   googleButton: {
-    backgroundColor: '#4285F4',
+    backgroundColor: 'Light',
   },
   facebookButton: {
-    backgroundColor: '#3b5998',
+    backgroundColor: '#1964F7',
   },
   socialButtonText: {
-    color: '#fff',
-    fontSize: wp('4.1667%'),
+    color: '#FEFEFE',
+    fontSize: wp('3.6458%'),
     textTransform: 'capitalize',
+    fontFamily: 'Manrope',
+    fontWeight:'500'
   },
 }

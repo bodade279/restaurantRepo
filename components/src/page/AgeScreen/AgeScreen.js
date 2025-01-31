@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-nativ
 import Icon from 'react-native-vector-icons/Ionicons'; // Importing the icon library
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import CustomArrow from '../../custum-component/custom-arrow/CustomArrow';
-import CustomButton from './../../custom-component/custombutton/CustomButton';
+import CustomButton from '../../custom-component/custombutton/CustomButton';
 
 const AgeScreen = () => {
     const handleBackPress = () => {
