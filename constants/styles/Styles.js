@@ -37,11 +37,12 @@ export const ageStyles = {
     paddingBottom: hp('5.0891%')
   },
   main: {
-    marginTop: hp('5.0891%'),
+    
+    // marginTop: hp('5.0891%'),
     paddingLeft: wp('6.5104%')
   },
   subMain: {
-    marginTop: hp('20.1018%')
+    marginTop: hp('30.4071%')
   },
   textView: {
     fontSize: wp('6.25%'),
@@ -250,11 +251,11 @@ export const usernamestyle = {
     fontFamily: 'Manrope',
   },
   button: {
-    backgroundColor: '#F7B603',
-    width: wp('90%'),
-    height: hp('7%'),
-    position: 'absolute',
-    bottom: 50,
+    // backgroundColor: '#F7B603',
+    // width: wp('90%'),
+    // height: hp('7%'),
+    // position: 'absolute',
+    bottom: hp('6.3613%'),
     alignSelf: 'center',
     paddingVertical: hp('1.5%'),
     paddingHorizontal: wp('5%'),
@@ -299,7 +300,7 @@ export const nameStyle = {
   textInputView: {
     justifyContent: 'center',
     alignSelf: 'center',
-    marginTop: hp('7.1247%')
+    marginTop: hp('16.5954%')
   },
   input: {
     width: wp('89.3229%'),
@@ -324,7 +325,7 @@ export const nameStyle = {
     textAlign: 'center'
   },
   touchableView: {
-    marginTop: hp('34.8601%'),
+    marginTop: hp('42.8753%'),
     alignSelf: 'center',
     justifyContent: 'center'
   }

@@ -10,15 +10,15 @@ import CustomArrow from '../../custum-component/custom-arrow/CustomArrow';
 export default function TellMorePage({ navigation }) {
   return (
     <View style={styles.container}>
-      <ScrollView contentContainerStyle={{ paddingBottom: hp('10%') }}>
-        <View style={{ marginTop: hp('5.0891%'), paddingLeft: wp('8.3333%') }}>
+      <ScrollView contentContainerStyle={{flexGrow:1,paddingBottom:hp('8.1425%')}} showsVerticalScrollIndicator={false}>
+        <TouchableOpacity style={{ marginTop: hp('9.1603%'), paddingLeft: wp('6.5%'), position: 'absolute' }}>
           <CustomArrow
             leftarrow={true}
             cl={true}
           />
-        </View>
+        </TouchableOpacity>
 
-        <View style={{ marginTop: hp('4.0712%') }}>
+        <View style={{ marginTop: hp('15.2672%') }}>
           <Text style={{ fontWeight: '700', fontSize: wp('6.25%'), textAlign: 'center', fontFamily: 'Manrope', color: '#060505' }}>Tell us more</Text>
         </View>
         <View style={{ justifyContent: 'center', alignSelf: 'center', marginTop: hp('5.9796%') }}>
@@ -32,12 +32,7 @@ export default function TellMorePage({ navigation }) {
         </View>
         <TouchableOpacity style={{
 
-          position: 'absolute',
-          top: hp('88%'),
-          // paddingVertical: hp('1.5%'),
-
-          alignSelf: 'center',
-          justifyContent: 'center',
+          marginTop: hp('10.0509%'), alignSelf: 'center', justifyContent: 'center' 
         }}>
           <CustomButton
             width={wp('88.5417%')}

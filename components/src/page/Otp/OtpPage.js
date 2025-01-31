@@ -18,20 +18,20 @@ const OtpPage = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <ScrollView contentContainerStyle={{paddingBottom:hp('0%')}} showsVerticalScrollIndicator={false}>
-      <TouchableOpacity style={{marginTop:hp('6.7964%'),paddingLeft:wp('6.5%'),position:'absolute'}}>
+      <ScrollView >
+      <TouchableOpacity style={{   marginTop: hp('9.1603%'), paddingLeft: wp('6.5%'), position: 'absolute'}}>
     <CustomArrow
     leftarrow={true}
     cl={true}
     />
       </TouchableOpacity> 
 
-      <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+      <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: hp('25.8448%'), }}>
 
      
       <Text style={styles.title}>OTP Verification</Text>
      
-     <View style={{marginTop:hp('4.0712%')}}>
+     <View style={{marginTop:hp('6.6158%')}}>
      <TextInput
             style={ageStyles.input}
            
@@ -79,10 +79,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: hp('3%'),
-    marginTop: hp('20%'),
+    // marginTop: hp('20%'),
 
   fontFamily:'Manrope',
-    marginBottom: hp('5%'),
+    // marginBottom: hp('5%'),
     
   },
   otpInput: {

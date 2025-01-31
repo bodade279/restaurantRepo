@@ -11,18 +11,18 @@ import { nameStyle } from '@/constants/styles/Styles';
 export default function NamePage({navigation}) {
     return (
         <View style={nameStyle.container}>
-            <ScrollView contentContainerStyle={nameStyle.scrollContent}>
-                <View style={nameStyle.main}>
+            <ScrollView contentContainerStyle={{flexGrow:1,paddingBottom:hp('8.1425%')}} showsVerticalScrollIndicator={false} >
+                <TouchableOpacity style={{ marginTop: hp('9.1603%'), paddingLeft: wp('6.5%'), position: 'absolute' }}>
                     <CustomArrow
                         leftarrow={true}
                         cl={true}
                     />
-                </View>
+                </TouchableOpacity>
 
 
 
                 <View style={nameStyle.textInputView}>
-                    <Text style={nameStyle.textView}>First Name</Text>
+                    <Text style={nameStyle.textView}>Name</Text>
 
                     <TextInput
                         style={nameStyle.input}
@@ -44,14 +44,15 @@ export default function NamePage({navigation}) {
 
                 <TouchableOpacity style={nameStyle.touchableView}>
                     <CustomButton
-                        width={340}
-                        height={60}
-                        title='Continue'
-                        backgroundColor={'#FEC946'}
-                        borderRadius={10}
-                        textAlign={'center'}
-                        fontSize={16}
-                        color={"#000000"}
+                          width={wp('88.5417%')}
+                                   height={hp('7.6336%')}
+                                   title='Continue'
+                                   backgroundColor={'#FEC946'}
+                                   borderRadius={wp('2.6042%')}
+                                   textAlign={'center'}
+                                   fontSize={wp("4.1667%")}
+                                   fontFamily='Manrope'
+                                   color={"#000000"}
                         onPress={() => navigation.navigate('UserNamePage')}
 
                     />

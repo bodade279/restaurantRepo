@@ -14,13 +14,13 @@ export default function AgePage({navigation}) {
 
   return (
     <View style={ageStyles.container}>
-      <ScrollView >
-        <View style={ageStyles.main}>
+      <ScrollView  contentContainerStyle={{flexGrow:1,paddingBottom:hp('8.1425%')}} showsVerticalScrollIndicator={false} >
+        <TouchableOpacity style={{ marginTop: hp('9.1603%'), paddingLeft: wp('6.5%'), position: 'absolute' }}>
           <CustomArrow
             leftarrow={true}
             cl={true}
           />
-        </View>
+        </TouchableOpacity>
         <View style={{justifyContent:'center',alignItems:'center'}}>
 
         <View style={ageStyles.subMain}>
@@ -38,20 +38,19 @@ export default function AgePage({navigation}) {
         </View>
 
         <TouchableOpacity style={{marginTop:hp('35%')}}>
-          <CustomButton
-            width={340}
-            height={60}
-            title='Continue'
-            backgroundColor={'#FEC946'}
-            borderRadius={10}
-            textAlign={'center'}
-            fontSize={16}
-            fontFamily='Manrope'
-            color={"#000000"}
-            onPress={handleNavigation}
+        <CustomButton
+                        width={wp('88.5417%')}
+                        height={hp('7.6336%')}
+                        title='Continue'
+                        backgroundColor={'#FEC946'}
+                        borderRadius={wp('2.6042%')}
+                        textAlign={'center'}
+                        fontSize={wp("4.1667%")}
+                        color={"#000000"}
+                        fontFamily='Manrope'
+                        onPress={handleNavigation}
 
-          />
-
+                    />
         </TouchableOpacity>
         </View>
       </ScrollView>

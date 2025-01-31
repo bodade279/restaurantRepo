@@ -3,6 +3,7 @@ import { View, ScrollView, Text, TouchableOpacity } from 'react-native';
 import { usernamestyle } from '@/constants/styles/Styles';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import CustomArrow from '../../custum-component/custom-arrow/CustomArrow';
+import CustomButton from '../../custom-component/custombutton/CustomButton';
 
 export default function UserNamePage({navigation}) {
     return (
@@ -26,8 +27,20 @@ export default function UserNamePage({navigation}) {
             </ScrollView>
 
             {/* Button at the bottom */}
-            <TouchableOpacity style={usernamestyle.button} onPress={() => navigation.navigate('AgePage')}>
-                <Text style={usernamestyle.buttonText}>Continue</Text>
+            <TouchableOpacity style={usernamestyle.button}>
+            <CustomButton
+                          width={wp('88.5417%')}
+                                   height={hp('7.6336%')}
+                                   title='Continue'
+                                   backgroundColor={'#FEC946'}
+                                   borderRadius={wp('2.6042%')}
+                                   textAlign={'center'}
+                                   fontSize={wp("4.1667%")}
+                                   fontFamily='Manrope'
+                                   color={"#000000"}
+                                   onPress={() => navigation.navigate('AgePage')}
+                                   />
+               
             </TouchableOpacity>
         </View>
     );
