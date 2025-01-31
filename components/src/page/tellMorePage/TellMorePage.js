@@ -7,42 +7,52 @@ import { Images } from '../../../../constants/images/Images'
 import CustomButton from '../../custom-component/custombutton/CustomButton';
 import CustomArrow from '../../custum-component/custom-arrow/CustomArrow';
 
-export default function TellMorePage() {
+export default function TellMorePage({ navigation }) {
   return (
     <View style={styles.container}>
-      <ScrollView contentContainerStyle={{ paddingBottom: 30 }}>
-        <View style={{ marginTop: 40, paddingLeft: 32 }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: hp('10%') }}>
+        <View style={{ marginTop: hp('5.0891%'), paddingLeft: wp('8.3333%') }}>
           <CustomArrow
             leftarrow={true}
             cl={true}
           />
         </View>
 
-        <View style={{ marginTop: 32 }}>
-          <Text style={{ fontSize: 24, textAlign: 'center', fontFamily: 'Manrope' }}>Tell us more</Text>
+        <View style={{ marginTop: hp('4.0712%') }}>
+          <Text style={{ fontWeight: '700', fontSize: wp('6.25%'), textAlign: 'center', fontFamily: 'Manrope', color: '#060505' }}>Tell us more</Text>
         </View>
-        <View style={{ justifyContent: 'center', alignSelf: 'center', marginTop: 47 }}>
-          <Image source={Images['tellmore']} style={{ width: 135, height: 135 }} resizeMode='contain' />
+        <View style={{ justifyContent: 'center', alignSelf: 'center', marginTop: hp('5.9796%') }}>
+          <Image source={Images['tellmore']} style={{ width: wp('35.1563%'), height: hp('17.1756%') }} resizeMode='contain' />
         </View>
-        <View style={{ marginTop: 48, left: 20 }}>
-          <Text style={{ color: "#06050599", fontSize: 16, fontFamily: 'Manrope' }}>Add a description</Text>
+        <View style={{ marginTop: hp('6.1069%'), left: wp('5.2083%') }}>
+          <Text style={{ color: "#06050599", fontSize: wp('4.1667%'), fontFamily: 'Manrope' }}>Add a description</Text>
         </View>
-        <View style={{ borderColor: "#F3EFE1", marginTop: 12, justifyContent: 'center', alignSelf: 'center', borderWidth: 1, width: 343, height: 243, borderRadius: 16 }}>
+        <View style={{ borderColor: "#00000033", marginTop: hp('1.5267%'), justifyContent: 'center', alignSelf: 'center', borderWidth: 1, width: wp('89.3229%'), height: hp('30%'), borderRadius: wp('4.1667%') }}>
 
         </View>
-        <TouchableOpacity style={{ marginTop: 79, alignSelf: 'center', justifyContent: 'center' }}>
+        <TouchableOpacity style={{
+
+          position: 'absolute',
+          top: hp('88%'),
+          // paddingVertical: hp('1.5%'),
+
+          alignSelf: 'center',
+          justifyContent: 'center',
+        }}>
           <CustomButton
-            width={340}
-            height={60}
-            title='Sign Up'
+            width={wp('88.5417%')}
+            height={hp('7.6336%')}
+            title='Continue'
             backgroundColor={'#FEC946'}
-            borderRadius={10}
+            borderRadius={wp('2.6042%')}
             textAlign={'center'}
-            fontSize={16}
+            fontSize={wp("4.1667%")}
+            fontFamily='Manrope'
             color={"#000000"}
+            onPress={() => navigation.navigate('TellMoreProfile')}
+
 
           />
-
         </TouchableOpacity>
       </ScrollView>
     </View>
@@ -52,6 +62,7 @@ export default function TellMorePage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff'
 
   },
 

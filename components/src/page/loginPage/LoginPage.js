@@ -12,7 +12,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { loginStyles } from '@/constants/styles/Styles';
 import CustomButton from '../../custom-component/custombutton/CustomButton';
-export default function LoginPage() {
+export default function LoginPage({navigation}) {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [countryCode, setCountryCode] = useState('+1');
 
@@ -20,7 +20,7 @@ export default function LoginPage() {
     <View style={loginStyles.container}>
       <ScrollView >
         <View style={loginStyles.main}>
-          <Image source={require('../../../../assets/images/Logo (1).png')} style={{ width: 116, height: 43 }} resizeMode='contain' />
+          <Image source={require('../../../../assets/images/Logo (1).png')} style={{ width: wp('30.2083%'), height: hp('5.4707%') }} resizeMode='contain' />
         </View>
         <View style={{ paddingLeft: wp('6.5%') }}>
           <Text style={loginStyles.subtitle}>
@@ -63,9 +63,9 @@ export default function LoginPage() {
           />
 
           {/* Don't have an account */}
-          <TouchableOpacity style={{ marginTop: hp('4.3257%'), flexDirection: 'row', marginLeft: wp("47%") }}>
+          <TouchableOpacity onPress={()=>navigation.navigate('MobileNumberScreen')} style={{ marginTop: hp('4.3257%'), flexDirection: 'row', marginLeft: wp("47%") }}>
             <Text style={loginStyles.accountLink}>Don’t have an account?</Text>
-            <MaterialIcons name="keyboard-arrow-right" size={24} color='#007AFF' />
+            <MaterialIcons name="keyboard-arrow-right" size={24} color='#007AFF' style={{bottom:hp('0.3817%'),position:'fixed'}} />
 
           </TouchableOpacity>
           <View style={loginStyles.loginButton}>
@@ -78,6 +78,7 @@ export default function LoginPage() {
               textAlign={'center'}
               fontSize={wp('4.1667%')}
               color={"#FEFEFE"}
+              marginBottom={hp('0.7%')}
 
             />
           </View>
@@ -86,18 +87,22 @@ export default function LoginPage() {
             <Text style={loginStyles.orText}>or</Text>
             <View style={loginStyles.divider} />
           </View>
-          <View style={{ marginTop: 65 }}>
+          <View style={{ marginTop: hp('8.2697%') }}>
 
             <TouchableOpacity style={[loginStyles.socialButton, loginStyles.appleButton]}>
               <Text style={loginStyles.socialButtonText}>continue with apple</Text>
+              <Image source={require('../../../../assets/images/apple.png')} style={{ width:wp('6.25%'), height:hp('3.0534%'),  }} resizeMode='contain' />
             </TouchableOpacity>
 
             <TouchableOpacity style={[loginStyles.socialButton, loginStyles.googleButton]}>
-              <Text style={loginStyles.socialButtonText}>continue with google</Text>
+              <Text style={[loginStyles.socialButtonText,{color:'#1958F7'}]}>continue with google</Text>
+              <Image source={require('../../../../assets/images/google.png')} style={{ width:wp('6.25%'), height:hp('3.0534%'),}} resizeMode='contain' />
             </TouchableOpacity>
 
             <TouchableOpacity style={[loginStyles.socialButton, loginStyles.facebookButton]}>
               <Text style={loginStyles.socialButtonText}>continue with facebook</Text>
+              <Image source={require('../../../../assets/images/facebook.png')} style={{ width:wp('6.25%'), height:hp('3.0534%'),}} resizeMode='contain' />
+              
             </TouchableOpacity>
           </View>
 
