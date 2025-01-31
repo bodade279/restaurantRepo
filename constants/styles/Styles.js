@@ -195,4 +195,120 @@ export const loginStyles = {
     fontSize: wp('4.1667%'),
     textTransform: 'capitalize',
   },
+
+
+
+}
+
+export const usernamestyle = {
+  container: {
+    // flex: 1,
+    height: '100%',
+    backgroundColor: "#fff",
+  },
+  scrollContent: {
+    paddingBottom: hp('12%')
+  },
+  main: {
+    marginTop: hp('5%'),
+    paddingLeft: wp('6.5%')
+  },
+  section: {
+    marginTop: hp('10%'),
+    alignItems: 'center',
+
+  },
+  titleText: {
+    fontSize: wp('6.5%'),
+    fontFamily: 'Manrope',
+    textAlign: 'center'
+  },
+  usernameText: {
+    fontSize: wp('8%'),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: hp('4%'),
+    fontFamily: 'Manrope',
+  },
+  changeText: {
+    fontSize: wp('4%'),
+    color: '#555',
+    textAlign: 'center',
+    marginTop: hp('0.5%'),
+    fontFamily: 'Manrope',
+  },
+  button: {
+    backgroundColor: '#F7B603',
+    width: wp('90%'),
+    height: hp('7%'),
+    position: 'absolute',
+    bottom: 50,
+    alignSelf: 'center',
+    paddingVertical: hp('1.5%'),
+    paddingHorizontal: wp('5%'),
+    borderRadius: wp('2%'),
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  buttonText: {
+    color: '#000',
+    fontSize: wp('4.5%'),
+    fontWeight: 'bold'
+  }
+};
+export const nameStyle = {
+  container: {
+    // flex: 1
+    height: '100%',
+    backgroundColor: "#fff",
+  },
+
+  scrollContent: {
+    paddingBottom: hp('5.0891%')
+  },
+  main: {
+    marginTop: hp('5.0891%'),
+    paddingLeft: wp('6.5104%')
+  },
+  subMain: {
+    marginTop: hp('20.1018%')
+  },
+  textView: {
+    fontSize: wp('4.25%'),
+    // textAlign: 'center',
+    marginTop: wp('6.25%'),
+    marginottom: wp('6.25%'),
+    fontFamily: 'Manrope'
+  },
+  textInputView: {
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginTop: hp('7.1247%')
+  },
+  input: {
+    width: wp('89.3229%'),
+    height: hp('7.1247%'),
+    borderWidth: wp('0.2604%'),
+    borderRadius: wp('4.1667%'),
+    paddingLeft: wp('5%'),
+    backgroundColor: '#232323',
+    marginTop: wp('4.25%'),
+
+  },
+  textView1: {
+    marginTop: hp('2.0356%'),
+    paddingLeft: wp('6.25%'),
+    paddingRight: wp('6.25%'),
+  },
+  text2: {
+    color: "#06050599",
+    fontSize: wp('4.1667%'),
+    fontFamily: 'Manrope',
+    textAlign: 'center'
+  },
+  touchableView: {
+    marginTop: hp('34.8601%'),
+    alignSelf: 'center',
+    justifyContent: 'center'
+  }
 }

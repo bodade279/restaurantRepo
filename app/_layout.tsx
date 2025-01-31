@@ -8,6 +8,10 @@ import 'react-native-reanimated';
 import OtpScreen from '../components/src/screen/Otp/OtpScreen'
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { View } from 'react-native';
+import UserNamePage from './../components/src/page/useNamesPage/UserNamePage';
+import AgePage from './../components/src/page/agePage/AgePage';
+import TellMorePage from './../components/src/page/tellMorePage/TellMorePage';
+import NamePage from './../components/src/page/namePage/NamePage';
 
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -17,6 +21,7 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    Manrope: require('../assets/fonts/Manrope-Bold.ttf'),
   });
 
   useEffect(() => {
@@ -31,7 +36,11 @@ export default function RootLayout() {
 
   return (
     <View>
-     <OtpScreen/>
+      {/* <OtpScreen /> */}
+      {/* <UserNamePage /> */}
+      {/* <AgePage /> */}
+      {/* <TellMorePage /> */}
+      <NamePage />
     </View>
   );
 }
