@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         bottom: hp('5%'),
         left: wp('5%'),
         right: wp('5%'),
-        backgroundColor: "#F4C534",
+        backgroundColor: "#FEC946",
         paddingVertical: hp('2%'),
         borderRadius: wp('2%'),
         alignItems: "center",

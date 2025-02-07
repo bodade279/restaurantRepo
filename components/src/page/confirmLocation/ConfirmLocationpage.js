@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Manrope',
     },
     confirmButton: {
-        backgroundColor: "#F4C534",
+        backgroundColor: "#FEC946",
         paddingVertical: hp('2%'),
         borderRadius: wp('2%'),
         alignItems: "center",
@@ -102,13 +102,14 @@ const styles = StyleSheet.create({
         width: wp('90%'), 
     },
     confirmText: {
-        fontSize: wp('4%'),
+        fontSize: wp('5%'),
         fontWeight: "bold",
         color: "#000",
         fontFamily: 'Manrope',
     },
     cancelButton: {
         backgroundColor: "#fff",
+        fontSize: wp('5%'),
         paddingVertical: hp('2%'),
         borderRadius: wp('2%'),
         alignItems: "center",
@@ -118,7 +119,7 @@ const styles = StyleSheet.create({
         width: wp('90%'), 
     },
     cancelText: {
-        fontSize: wp('4%'),
+        fontSize: wp('5%'),
         fontWeight: "bold",
         color: "#000",
         fontFamily: 'Manrope',
