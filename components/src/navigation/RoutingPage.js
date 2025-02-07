@@ -9,6 +9,8 @@ import InitialScreen from '../page/initialPage/InitialScreen'
 import RefferalCode from '../page/refferal-code/RefferalCode'
 import UserNamePage from '../page/useNamesPage/UserNamePage';
 import NamePage from '../page/namePage/NamePage';
+import ConfirmLocationPage from './../page/confirmLocation/ConfirmLocationpage';
+import PrivacyAndpolicy from './../page/privacyAndpolicy/PrivacyAndpolicy';
 const Routing =createStackNavigator();
 const RoutingPage = () => {
   return (
@@ -23,6 +25,8 @@ const RoutingPage = () => {
       <Routing.Screen name="RefferalCode" component={RefferalCode} options={{ headerShown: false }} />
       <Routing.Screen name="UserNamePage" component={UserNamePage} options={{ headerShown: false }} />
       <Routing.Screen name="NamePage" component={NamePage} options={{ headerShown: false }} />
+      <Routing.Screen name="ConfirmLocationPage" component={ConfirmLocationPage} options={{ headerShown: false }} />
+      <Routing.Screen name="PrivacyAndpolicy" component={PrivacyAndpolicy} options={{ headerShown: false }} />
       </Routing.Navigator>
   
   

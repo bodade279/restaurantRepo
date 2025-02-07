@@ -30,7 +30,7 @@ export default function TellMoreProfile({navigation}) {
         <View style={{ borderColor: "#00000033", marginTop: hp('1.5267%'), justifyContent: 'center', alignSelf: 'center', borderWidth: wp('0.2604%'), width: wp('89.3229%'), height: hp('30.916%'), borderRadius: wp('4.1667%') }}>
 
         </View>
-        <TouchableOpacity style={{ marginTop: hp('10.0509%'), alignSelf: 'center', justifyContent: 'center' }} onPress={()=>navigation.navigate('InitialScreen')}>
+        <TouchableOpacity style={{ marginTop: hp('10.0509%'), alignSelf: 'center', justifyContent: 'center' }} onPress={() => navigation.navigate('ConfirmLocationPage')}>
           <CustomButton
             width={wp('88.5417%')}
             height={hp('7.6336%')}
@@ -41,7 +41,7 @@ export default function TellMoreProfile({navigation}) {
             fontSize={wp("4.1667%")}
             color={"#000000"}
             fontFamily='Manrope'
-            onPress={()=>navigation.navigate('InitialScreen')}
+            onPress={() => navigation.navigate('ConfirmLocationPage')}
 
           />
 

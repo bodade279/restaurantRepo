@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     fontSize: hp('3%'),
     marginBottom: hp('2%'),
     backgroundColor: '#000',
-    color: '#F7B603',
+    color: '#FEC946',
     letterSpacing: wp('2%'),
   },
   resendText: {
