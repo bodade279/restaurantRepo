@@ -6,13 +6,17 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import { Images } from '../../../../constants/images/Images'
 import CustomButton from '../../custom-component/custombutton/CustomButton';
 import CustomArrow from '../../custum-component/custom-arrow/CustomArrow';
-import { nameStyle } from '@/constants/styles/Styles';
+import { ageStyles, nameStyle, usernamestyle } from '@/constants/styles/Styles';
 
 export default function NamePage({navigation}) {
+    const handleBackPress = () => {
+       navigation.goBack();
+        // Add navigation logic here
+    };
     return (
         <View style={nameStyle.container}>
-            <ScrollView contentContainerStyle={{flexGrow:1,paddingBottom:hp('8.1425%')}} showsVerticalScrollIndicator={false} >
-                <TouchableOpacity style={{ marginTop: hp('9.1603%'), paddingLeft: wp('6.5%'), position: 'absolute' }}>
+            <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: hp('20.1425%') }} showsVerticalScrollIndicator={false}>
+                                                                    <TouchableOpacity style={[ageStyles.arrowTouch,]} onPress={() => navigation.goBack()}>
                     <CustomArrow
                         leftarrow={true}
                         cl={true}
@@ -39,10 +43,10 @@ export default function NamePage({navigation}) {
                         placeholderTextColor={'white'}
                     />
                 </View>
+                </ScrollView>
 
 
-
-                <TouchableOpacity style={nameStyle.touchableView}>
+                <TouchableOpacity style={usernamestyle.button}>
                     <CustomButton
                           width={wp('88.5417%')}
                                    height={hp('7.6336%')}
@@ -58,7 +62,7 @@ export default function NamePage({navigation}) {
                     />
 
                 </TouchableOpacity>
-            </ScrollView>
+       
         </View>
     );
 }

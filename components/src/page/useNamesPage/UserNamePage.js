@@ -1,17 +1,21 @@
 import React from 'react';
 import { View, ScrollView, Text, TouchableOpacity } from 'react-native';
-import { usernamestyle } from '@/constants/styles/Styles';
+import { ageStyles, usernamestyle } from '@/constants/styles/Styles';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import CustomArrow from '../../custum-component/custom-arrow/CustomArrow';
 import CustomButton from '../../custom-component/custombutton/CustomButton';
 
 export default function UserNamePage({navigation}) {
+    const handleBackPress = () => {
+        console.log('Back button pressed');
+        // Add navigation logic here
+    };
     return (
         <View style={usernamestyle.container}>
-            <ScrollView contentContainerStyle={usernamestyle.scrollContent}>
-                <View style={usernamestyle.main}>
+           <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: hp('20.1425%') }} showsVerticalScrollIndicator={false}>
+                                                         <TouchableOpacity style={[ageStyles.arrowTouch,]} onPress={() => navigation.goBack()}>
                     <CustomArrow leftarrow={true} cl={true} />
-                </View>
+                </TouchableOpacity>
 
                 <View style={usernamestyle.section}>
                     <Text style={usernamestyle.titleText}>Your Instagram username.</Text>

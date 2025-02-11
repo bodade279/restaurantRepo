@@ -4,13 +4,13 @@ import Icon from 'react-native-vector-icons/Ionicons'; // Importing the icon lib
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import CustomArrow from '../../custum-component/custom-arrow/CustomArrow';
 import CustomButton from '../../custom-component/custombutton/CustomButton';
-import { ageStyles } from '@/constants/styles/Styles';
+import { ageStyles, usernamestyle } from '@/constants/styles/Styles';
 
 const OtpPage = ({navigation}) => {
   const handleBackPress = () => {
-    console.log('Back button pressed');
-    // Add navigation logic here
-  };
+    navigation.goBack();
+     // Add navigation logic here
+   };
 
   const handleNavigation=()=>{
     navigation.navigate('NamePage')
@@ -18,8 +18,8 @@ const OtpPage = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <ScrollView >
-      <TouchableOpacity style={{   marginTop: hp('9.1603%'), paddingLeft: wp('6.5%'), position: 'absolute'}}>
+     <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: hp('20.1425%') }} showsVerticalScrollIndicator={false}>
+                                               <TouchableOpacity style={[ageStyles.arrowTouch,]} onPress={() => navigation.goBack()}>
     <CustomArrow
     leftarrow={true}
     cl={true}
@@ -44,7 +44,10 @@ const OtpPage = ({navigation}) => {
         Did not receive it <Text style={styles.resendLink}>resend</Text>
       </Text>
       </View>
-      <TouchableOpacity style={{ marginTop: hp('41%'), }}>
+      </View>
+             </ScrollView>
+
+      <TouchableOpacity style={usernamestyle.button}>
                     <CustomButton
                         width={wp('88.5417%')}
                         height={hp('7.6336%')}
@@ -59,8 +62,6 @@ const OtpPage = ({navigation}) => {
 
                     />
                 </TouchableOpacity>
-             </View>
-             </ScrollView>
     </View>
   );
 };
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
     fontSize: hp('3%'),
     marginBottom: hp('2%'),
     backgroundColor: '#000',
-    color: '#FEC946',
+    color: '#F7B603',
     letterSpacing: wp('2%'),
   },
   resendText: {

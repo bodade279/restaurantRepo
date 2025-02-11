@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, Dimensions, ScrollView } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import { Ionicons } from "@expo/vector-icons";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import { ageStyles, locationStyles } from "@/constants/styles/Styles";
+import CustomButton from "../../custom-component/custombutton/CustomButton";
+import CustomArrow from "../../custum-component/custom-arrow/CustomArrow";
 
 const ConfirmLocationPage = ({ navigation }) => {
     const [region, setRegion] = useState({
@@ -21,109 +24,76 @@ const ConfirmLocationPage = ({ navigation }) => {
         setMarker(e.nativeEvent.coordinate);
     };
 
+    const height = Dimensions.get('screen').height
+    const width = Dimensions.get('screen').width
+
+    console.log('height', height)
+    console.log('width', width)
     return (
-        <View style={styles.container}>
-            <TouchableOpacity style={styles.backButton}>
-                <Ionicons name="arrow-back" size={24} color="black" />
-            </TouchableOpacity>
+        <View style={locationStyles.container}>
+            <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: hp('20.1425%') }} showsVerticalScrollIndicator={false}>
+                <TouchableOpacity style={[ageStyles.arrowTouch,{left:0,zIndex:999}]} onPress={() => navigation.goBack()}>
+                    <CustomArrow
+                        leftarrow={true}
+                        cl={true}
+                    />
+                </TouchableOpacity>
+             <View style={{marginTop:hp('4.267%')}}>
+                <Text style={locationStyles.title}>Confirm your location</Text>
+                </View>
+                <View style={locationStyles.mapView}>
+                    <MapView
+                        style={locationStyles.map}
+                        region={region}
+                        onPress={handleMapPress}
+                    >
+                        <Marker coordinate={marker} />
+                    </MapView>
+                </View>
+                <View style={{ marginTop: hp('4.1575%') }}>
+                    <Text style={locationStyles.subText}>
+                        Touch to drop pin for more accurate location.
+                    </Text>
+                </View>
+            </ScrollView>
             
-            <Text style={styles.title}>Confirm your location</Text>
-            <View style={styles.mapView}>
-            <MapView
-                style={styles.map}
-                region={region}
-                onPress={handleMapPress}
-            >
-                <Marker coordinate={marker} />
-            </MapView>
-            </View>
-            <Text style={styles.subText}>
-                Touch to drop pin for more accurate location.
-            </Text>
-            <TouchableOpacity style={styles.confirmButton} onPress={() => navigation.navigate('PrivacyAndpolicy')}>
-                <Text style={styles.confirmText}>Confirm</Text>
+                <CustomButton
+                    width={wp('88.5417%')}
+                    height={hp('7.6336%')}
+                    title='Confirm'
+                    backgroundColor={'#FEC946'}
+                    borderRadius={wp('2.6042%')}
+                    textAlign={'center'}
+                    fontSize={wp("4.1667%")}
+                    fontFamily='Manrope'
+                    color={"#000000"}
+                    onPress={() => navigation.navigate('PrivacyAndpolicy')}
+
+
+                />
+           
+            <TouchableOpacity style={{ marginTop: hp('1.0941%'),marginBottom:hp('2%') }} >
+                <CustomButton
+                    width={wp('88.5417%')}
+                    height={hp('7.6336%')}
+                    title='Sorry not my address'
+
+                    borderRadius={wp('2.6042%')}
+                    textAlign={'center'}
+                    fontSize={wp("4.1667%")}
+                    fontFamily='Manrope'
+                    color={"#000000"}
+                    borderWidth={1}
+                    borderColor={"#ccc"}
+
+                />
+
             </TouchableOpacity>
-            <TouchableOpacity style={styles.cancelButton}>
-                <Text style={styles.cancelText}>Sorry not my address</Text>
-            </TouchableOpacity>
+
         </View>
     );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        paddingHorizontal: wp('5%'),
-        paddingTop: hp('5%'),
-        alignItems: "center", 
-    },
-    backButton: {
-        position: "absolute",
-        top: hp('5%'),
-        left: wp('5%'),
-        zIndex: 10,
-    },
-    title: {
-        fontSize: wp('7%'),
-        fontWeight: "bold",
-        textAlign: "center",
-        marginBottom: hp('10%'),
-        marginTop: hp('5%'),
-        fontFamily: 'Manrope',
-    },
-    mapView: {
-        width: wp('90%'),
-        height: hp('25%'),
-        borderRadius: wp('5%'),
-        overflow: "hidden",
-        borderWidth: 1,
-        borderColor: "#000",  
-    },
-    map: {
-        height: hp('25%'),
-        borderRadius: wp('5%'),
-        overflow: "hidden",
-        borderWidth: 1, 
-        borderColor: "#000", 
-    },
-    subText: {
-        textAlign: "center",
-        color: "#555",
-        marginVertical: hp('1%'),
-        fontFamily: 'Manrope',
-    },
-    confirmButton: {
-        backgroundColor: "#FEC946",
-        paddingVertical: hp('2%'),
-        borderRadius: wp('2%'),
-        alignItems: "center",
-        marginTop: hp('2%'),
-        width: wp('90%'), 
-    },
-    confirmText: {
-        fontSize: wp('5%'),
-        fontWeight: "bold",
-        color: "#000",
-        fontFamily: 'Manrope',
-    },
-    cancelButton: {
-        backgroundColor: "#fff",
-        fontSize: wp('5%'),
-        paddingVertical: hp('2%'),
-        borderRadius: wp('2%'),
-        alignItems: "center",
-        marginTop: hp('1%'),
-        borderWidth: 1,
-        borderColor: "#ccc",
-        width: wp('90%'), 
-    },
-    cancelText: {
-        fontSize: wp('5%'),
-        fontWeight: "bold",
-        color: "#000",
-        fontFamily: 'Manrope',
-    },
-});
+
 
 export default ConfirmLocationPage;

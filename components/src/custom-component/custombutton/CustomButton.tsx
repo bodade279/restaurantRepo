@@ -31,6 +31,8 @@ interface ButtonInterface {
   customtitle: string;
   marginBottom: number;
   textAlign:string
+  paddingRight:number;
+  paddingLeft:number
 
 
 
@@ -48,10 +50,7 @@ const CustomButton: React.FC<ButtonInterface> = ({
   borderWidth,
   borderRadius,
   color,
-  email,
-  google,
-  apple,
-  linkedin,
+  
   fontFamily,
   profile,
   onPress,
@@ -61,7 +60,10 @@ const CustomButton: React.FC<ButtonInterface> = ({
   id,
   customtitle,
   marginBottom,
-  textAlign
+  textAlign,
+  paddingRight,
+  paddingLeft
+  
 
 }) => {
   return (
@@ -78,16 +80,13 @@ const CustomButton: React.FC<ButtonInterface> = ({
         borderWidth: borderWidth,
         opacity: opacity,
         alignItems: "center",
+        paddingLeft:paddingLeft,
+        paddingRight:paddingRight
       }}
       onPress={onPress}
     >
 
-      {/* {email && <Icon name="envelope" size={20} color="#000" style={customeButtonStyles.icon} />}
-      {google && <Image source={Images['Social']} style={customeButtonStyles.icon} />}
-      {apple && <Icon name="apple" size={20} color="#000" style={customeButtonStyles.icon} />}
-      {linkedin && <Image source={Images['linkdedin']} style={customeButtonStyles.icon} />}
-      {profile && <Image source={Images['profImg']} style={customeButtonStyles.icon} />} */}
-
+    
 
       <Text
         style={[customeButtonStyles.textView,

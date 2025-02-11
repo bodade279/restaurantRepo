@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
   },
   arrowButton: {
     padding: 0,
+    zIndex:999,
     backgroundColor: 'transparent',
   },
 });

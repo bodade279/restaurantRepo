@@ -4,18 +4,21 @@ import {
 } from 'react-native';
 import CustomButton from '../../custom-component/custombutton/CustomButton';
 import CustomArrow from '../../custum-component/custom-arrow/CustomArrow';
-import { ageStyles } from '@/constants/styles/Styles';
+import { ageStyles, usernamestyle } from '@/constants/styles/Styles';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 export default function AgePage({navigation}) {
   const handleNavigation=()=>{
     navigation.navigate('TellMorePage')
   }
-
+  const handleBackPress=()=>{
+  
+    navigation.goBack();
+  }
   return (
     <View style={ageStyles.container}>
-      <ScrollView  contentContainerStyle={{flexGrow:1,paddingBottom:hp('8.1425%')}} showsVerticalScrollIndicator={false} >
-        <TouchableOpacity style={{ marginTop: hp('9.1603%'), paddingLeft: wp('6.5%'), position: 'absolute' }}>
+       <ScrollView contentContainerStyle={usernamestyle.scrollContent}>
+        <TouchableOpacity style={ageStyles.arrowTouch} onPress={()=> navigation.goBack()}>
           <CustomArrow
             leftarrow={true}
             cl={true}
@@ -36,8 +39,10 @@ export default function AgePage({navigation}) {
         <View style={ageStyles.textView1}>
           <Text style={ageStyles.text2}>This is to personalize your experience and will not be visible on your profile.</Text>
         </View>
-
-        <TouchableOpacity style={{marginTop:hp('35%')}}>
+        </View>
+     
+        </ScrollView>
+        <TouchableOpacity style={usernamestyle.button}>
         <CustomButton
                         width={wp('88.5417%')}
                         height={hp('7.6336%')}
@@ -52,8 +57,7 @@ export default function AgePage({navigation}) {
 
                     />
         </TouchableOpacity>
-        </View>
-      </ScrollView>
+      
     </View>
   );
 }

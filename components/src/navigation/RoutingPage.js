@@ -5,17 +5,20 @@ import MobileNumberScreen from '../page/MobileNumber/MobileNumberScreen';
 import AgePage from '../page/agePage/AgePage'
 import TellMorePage from '../page/tellMorePage/TellMorePage'
 import TellMoreProfile from '../page/tellMoreProfile/TellMoreProfile'
-import InitialScreen from '../page/initialPage/InitialScreen'
+import InitialPage from '../page/initialPage/InitialPage'
 import RefferalCode from '../page/refferal-code/RefferalCode'
 import UserNamePage from '../page/useNamesPage/UserNamePage';
 import NamePage from '../page/namePage/NamePage';
-import ConfirmLocationPage from './../page/confirmLocation/ConfirmLocationpage';
-import PrivacyAndpolicy from './../page/privacyAndpolicy/PrivacyAndpolicy';
+import Category from '../page/category/Category';
+import Coupons from '../page/coupons/Coupons'
+import ConfirmLocationPage from '../page/confirmLocation/ConfirmLocationpage'
+import PrivacyAndpolicy from '../page/privacyAndpolicy/PrivacyAndpolicy'
+import ChristianPage1 from '../page/ChristianPage1/ChristianPage1'
 const Routing =createStackNavigator();
 const RoutingPage = () => {
   return (
-    <Routing.Navigator initialRouteName='InitialScreen'>
-      <Routing.Screen name="InitialScreen" component={InitialScreen} options={{ headerShown: false }} />
+    <Routing.Navigator initialRouteName='ChristianPage1'>
+      <Routing.Screen name="InitialPage" component={InitialPage} options={{ headerShown: false }} />
       <Routing.Screen name="LoginPage" component={LoginPage} options={{ headerShown: false }} />
       <Routing.Screen name="OtpPage" component={OtpPage} options={{ headerShown: false }} />
       <Routing.Screen name="MobileNumberScreen" component={MobileNumberScreen} options={{ headerShown: false }} />
@@ -25,8 +28,11 @@ const RoutingPage = () => {
       <Routing.Screen name="RefferalCode" component={RefferalCode} options={{ headerShown: false }} />
       <Routing.Screen name="UserNamePage" component={UserNamePage} options={{ headerShown: false }} />
       <Routing.Screen name="NamePage" component={NamePage} options={{ headerShown: false }} />
+      <Routing.Screen name="Category" component={Category} options={{ headerShown: false }} />
+      <Routing.Screen name="Coupons" component={Coupons} options={{ headerShown: false }} />
       <Routing.Screen name="ConfirmLocationPage" component={ConfirmLocationPage} options={{ headerShown: false }} />
-      <Routing.Screen name="PrivacyAndpolicy" component={PrivacyAndpolicy} options={{ headerShown: false }} />
+      <Routing.Screen name="ChristianPage1" component={ChristianPage1} options={{ headerShown: false }} /><Routing.Screen name="PrivacyAndpolicy" component={PrivacyAndpolicy} options={{ headerShown: false }} />
+
       </Routing.Navigator>
   
   

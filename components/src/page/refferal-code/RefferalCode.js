@@ -4,11 +4,11 @@ import Icon from 'react-native-vector-icons/Ionicons'; // Importing the icon lib
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import CustomArrow from '../../custum-component/custom-arrow/CustomArrow';
 import CustomButton from '../../custom-component/custombutton/CustomButton';
-import { ageStyles } from '@/constants/styles/Styles';
+import { ageStyles, usernamestyle } from '@/constants/styles/Styles';
 
 const RefferalCode = ({ navigation }) => {
     const handleBackPress = () => {
-        console.log('Back button pressed');
+        navigation.navigate("InitialPage");
         // Add navigation logic here
     };
 
@@ -18,50 +18,53 @@ const RefferalCode = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-<ScrollView contentContainerStyle={{flexGrow:1,paddingBottom:hp('8.1425%')}}>
-            <TouchableOpacity style={{ marginTop: hp('9.1603%'), paddingLeft: wp('6.5%'), position: 'absolute' }}>
-                <CustomArrow
-                    leftarrow={true}
-                    cl={true}
-                />
-            </TouchableOpacity>
-
-            <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: hp('25.8448%'),}}>
-
-                <Text style={styles.title}>Enter referral code</Text>
-                <View style={{ marginTop: hp("6.6158%") }}>
-                    <TextInput
-                        style={ageStyles.input}
-                        placeholderTextColor={'white'}
-                    />
-                </View>
-
-                <View style={{ marginTop: hp('2.0356%') }}>
-                    <Text style={styles.resendText}>
-                        Don’t have one?<Text style={styles.resendLink}>  join the waitlist.</Text>
-                    </Text>
-                </View>
-
-
-                <TouchableOpacity style={{ marginTop: hp('39.6947%') }}>
-                    <CustomButton
-                        width={wp('88.5417%')}
-                        height={hp('7.6336%')}
-                        title='Continue'
-                        backgroundColor={'#FEC946'}
-                        borderRadius={wp('2.6042%')}
-                        textAlign={'center'}
-                        fontSize={wp("4.1667%")}
-                        color={"#000000"}
-                        fontFamily='Manrope'
-                        onPress={handleNavigation}
-
+             <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: hp('20.1425%') }} showsVerticalScrollIndicator={false}>
+                                      <TouchableOpacity style={[ageStyles.arrowTouch,{zIndex:999}]} onPress={() => navigation.goBack()}>
+                    <CustomArrow
+                        leftarrow={true}
+                        cl={true}
                     />
                 </TouchableOpacity>
 
-            </View>
-            </ScrollView>
-        </View>
+                <View style={styles.textView}>
+
+                    <Text style={styles.title}>Enter referral code</Text>
+                    <View style={{ marginTop: hp("6.6158%") }}>
+                        <TextInput
+                            style={ageStyles.input}
+                            placeholderTextColor={'white'}
+                        />
+                    </View>
+                    
+
+                    <View style={{ marginTop: hp('2.0356%') }}>
+                        <Text style={styles.resendText}>
+                            Don’t have one?<Text style={styles.resendLink}>  join the waitlist.</Text>
+                        </Text>
+                    </View>
+                    </View>
+                    </ScrollView>
+
+                    <TouchableOpacity style={usernamestyle.button}>
+                        <CustomButton
+                            width={wp('88.5417%')}
+                            height={hp('7.6336%')}
+                            title='Continue'
+                            backgroundColor={'#FEC946'}
+                            borderRadius={wp('2.6042%')}
+                            textAlign={'center'}
+                            fontSize={wp("4.1667%")}
+                            color={"#000000"}
+                            fontFamily='Manrope'
+                            onPress={handleNavigation}
+
+                        />
+                    </TouchableOpacity>
+
+                </View>
+           
+    
+       
     );
 };
 
@@ -70,6 +73,19 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
 
+    },
+    textView: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: hp('25.8448%'),
+    },
+    arrowTouch: {
+        marginTop: hp('9.1603%'),
+        paddingLeft: wp('6.5%'),
+        position: 'absolute',
+        zIndex: 99,
+        width: wp("20%"),
+        height: hp("20%")
     },
     backButton: {
         position: 'absolute',
