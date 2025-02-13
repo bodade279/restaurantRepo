@@ -11,11 +11,21 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Chibi from '../../../../assets/images/image 26 (2).svg'
 
 
-const ChristianPage1 = ({ navigation }) => {
+const ChristianPage2 = ({ navigation }) => {
     const height = Dimensions.get('window').height;
     const width = Dimensions.get('window').width;
     const [couponCount, setCouponCount] = useState(1);
     const [select, setSelect] = useState([null])
+    
+        const handleIncrement = () => {
+            setCouponCount(prevCount => prevCount + 1);
+        };
+    
+        const handleDecrement = () => {
+            if (couponCount > 1) {
+                setCouponCount(prevCount => prevCount - 1);
+            }
+        };
     const arr = [
         { id: 1, name: 'Catergory' },
         { id: 2, name: 'Catergory' },
@@ -45,7 +55,6 @@ const ChristianPage1 = ({ navigation }) => {
                         </View>
                     </View>
                 </View>
-
                 <View style={styles.searchBar}>
 
                     <TextInput
@@ -93,23 +102,26 @@ const ChristianPage1 = ({ navigation }) => {
                         </View>
                     ))}
                 </View>
-
                 <LinearGradient colors={['#FFB600', '#FEC946']} style={{ width: wp('102.3438%'), height: hp('18.9567%'), }}>
                 </LinearGradient>
                 <View style={[styles.toggleBtn, { marginTop: hp('1.5267%') }]}>
                     <Text style={[styles.textView1, { left: wp('2%') }]}>Coupons</Text>
                 </View>
                 <View style={styles.main}>
-
-
-                    {[...Array(3)].map((_, index) => (
+                    {[...Array(1)].map((_, index) => (
                         <View key={index} style={styles.cardContainer}>
                             <View style={styles.card}>
                                 <View style={styles.cardContent}>
+                                  
+                                   <View style={styles.semiCircleLeft} />
 
+{/* Right semi-circle */}
+<View style={styles.semiCircleRight} />
+    
                                     <Img width={wp('24.3%')} height={hp('10.9%')} />
 
                                     <View style={styles.dashedLineContainer}>
+                                        
                                         {[...Array(5)].map((_, index) => (
                                             <View key={index} style={styles.dashedLine} />
                                         ))}
@@ -130,104 +142,103 @@ const ChristianPage1 = ({ navigation }) => {
                             </View>
                         </View>
                     ))}
+              <View>
+              <View style={[styles.subView,{right:wp('9.1922%')}]}>
+                        <View style={styles.subView1}>
+                        <View style={{flexDirection:'row',}}>
+                        <Img width={wp('24.3%')} height={hp('10.9%')} />
+                            <View style={styles.dashView}>
 
-                </View>
-                <LinearGradient colors={['#060505', '#424141']} style={styles.linearStyle}>
-                </LinearGradient>
-                <View style={[styles.toggleBtn, { marginTop: hp('1.5267%') }]}>
-                    <Text style={[styles.textView1, { left: wp('2%') }]}>Coupons</Text>
-                </View>
-                <View style={styles.main}>
-                    <View style={[styles.cardContainer, { justifyContent: 'center', alignSelf: 'center' }]}>
-                        <View style={styles.card}>
-                            <View style={styles.cardContent}>
-
-
-                                <Img width={wp('24.3%')} height={hp('10.9%')} />
-
-                                <View style={styles.dashedLineContainer}>
-                                    {[...Array(5)].map((_, index) => (
-                                        <View key={index} style={styles.dashedLine} />
-                                    ))}
+                                {[...Array(5)].map((_, index) => (
+                                    <View key={index} style={styles.dashStyle} />
+                                ))}
+                                
+                                 </View>
+                            </View>
+                            <View style={styles.mainCard}>
+                                <View
+                                    style={styles.subCard}>
+                                    <Text style={styles.textView}>asian</Text>
                                 </View>
 
-
-                                <View style={styles.textContainer}>
-                                    <View style={styles.badge}>
-                                        <Text style={styles.badgeText}>asian</Text>
-                                    </View>
-
-                                    <View style={styles.textSection}>
-                                        <Text style={styles.title1}>Domu Chibi Ramen</Text>
-                                        <Text style={styles.subtitle}>1 share = 1 free appetizer</Text>
-                                    </View>
+                                <View style={styles.textStyle}>
+                                    <Text style={styles.textDetails}>
+                                        Domu Chibi Ramen
+                                    </Text>
+                                    <Text style={styles.textDetails2}>
+                                        1 share = 1 free appetizer
+                                    </Text>
                                 </View>
+                            </View>
+                            <View style={[styles.btnView]}>
+                                <CustomButton
+                                    width={wp('8%')}
+                                    height={hp('15.6%')}
+                                    borderRadius={wp('1.4%')}
+                                    backgroundColor={'#FEC946'}
+                                    title='+'
+                                    fontSize={wp('6.1%')}
+                                    paddingLeft={0}
+                                    paddingRight={wp('1.7%')}
+                                    onPress={handleIncrement}
+                                />
+                                <CustomButton
+                                    width={wp('8%')}
+                                    height={hp('15.6%')}
+                                    borderRadius={wp('1.4%')}
+                                    textAlign='center'
+                                    color='white'
+                                    backgroundColor={'#060505'}
+                                    title='!'
+                                    fontSize={wp('6.1%')}
+                                    paddingLeft={0}
+                                    paddingRight={wp('1.7%')}
+                                    onPress={handleDecrement}
+                                />
                             </View>
                         </View>
                     </View>
 
-                    {[...Array(1)].map((_, index) => (
-                        <View key={index} style={styles.cardContainer}>
-                            <View style={[styles.card, { right: wp("14.4236%") }]}>
-                                <View style={styles.cardContent}>
-
-                                    <Img width={wp('24.3%')} height={hp('10.9%')} />
-
-                                    <View style={styles.dashedLineContainer}>
-                                        {[...Array(5)].map((_, index) => (
-                                            <View key={index} style={styles.dashedLine} />
+                    
+                                        {[...Array(couponCount)].map((_, index) => (
+                                            <View key={index} style={styles.cardContainer}>
+                                                <View style={styles.card}>
+                                                    <View style={styles.cardContent}>
+                                                        {/* Left Image */}
+                                                        <Img width={wp('24.3%')} height={hp('10.9%')} />
+                    
+                                                        {/* Dashed Line */}
+                                                        <View style={styles.dashedLineContainer}>
+                                                            {[...Array(5)].map((_, index) => (
+                                                                <View key={index} style={styles.dashedLine} />
+                                                            ))}
+                                                        </View>
+                    
+                                                        {/* Right Text Section */}
+                                                        <View style={styles.textContainer}>
+                                                            <View style={styles.badge}>
+                                                                <Text style={styles.badgeText}>asian</Text>
+                                                            </View>
+                    
+                                                            <View style={styles.textSection}>
+                                                                <Text style={styles.title1}>Domu Chibi Ramen</Text>
+                                                                <Text style={styles.subtitle}>1 share = 1 free appetizer</Text>
+                                                            </View>
+                                                        </View>
+                                                    </View>
+                                                </View>
+                                            </View>
                                         ))}
-                                    </View>
 
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <View style={[styles.textContainer, { paddingTop: hp("2.546%") }]}>
-                                            <View style={styles.badge}>
-                                                <Text style={styles.badgeText}>asian</Text>
-                                            </View>
-
-                                            <View style={styles.textSection}>
-                                                <Text style={styles.title1}>Domu Chibi Ramen</Text>
-                                                <Text style={styles.subtitle}>1 share = 1 free appetizer</Text>
-                                            </View>
-
-                                        </View>
-                                        <View style={{ left: wp('17.0139%'), bottom: 7 }}>
-                                            <CustomButton
-                                                width={wp('8.0208%')}
-                                                height={hp('14.9838%')}
-                                                borderRadius={wp('1.4%')}
-                                                backgroundColor={'#000000'}
-                                                title='+'
-                                                fontSize={wp('6.1%')}
-                                                paddingLeft={0}
-                                                paddingRight={wp('1.7%')}
-                                                color='#FFFFFF'
-                                            />
-                                        </View>
-                                    </View>
-                                </View>
-                            </View>
-                        </View>
-                    ))}
+                                        
+                    
+              </View>
 
                 </View>
+              
+               
             </ScrollView>
-            <TouchableOpacity style={usernamestyle.button} >
-                <CustomButton
-                    width={wp('88.5417%')}
-                    height={hp('7.6336%')}
-                    title='Continue'
-                    backgroundColor={'#FEC946'}
-                    borderRadius={wp('2.6042%')}
-                    textAlign={'center'}
-                    fontSize={wp("4.1667%")}
-                    color={"#000000"}
-                    fontFamily='Manrope'
-                    onPress={() => navigation.navigate('ChristianPage2')}
-
-                />
-
-            </TouchableOpacity>
+         
 
         </View>
     );
@@ -248,7 +259,34 @@ const styles = StyleSheet.create({
         fontSize: wp('5.8394%'),
         fontFamily: 'Manrope',
     },
-    btnView: { flexDirection: 'row', marginLeft: wp('19.4%') },
+    semiCircleLeft: {
+    width: 20, // Small width
+    height: 40, // Half-circle height
+    backgroundColor: '#FFFFFF', // Match background color
+    borderTopRightRadius: 20,
+    borderBottomRightRadius: 20,
+    position: 'absolute',
+    right: wp('85%'), // Half inside, half outside
+    top: '50%',
+    zIndex:999,
+    transform: [{ translateY: -10 }], // Center vertically
+    shadowOffset: { width: 0, height: hp('0.2%') },
+    shadowOpacity: 0.2,
+    shadowRadius: wp('1%'),
+    elevation: 5,
+  },
+  semiCircleRight: {
+    width: 20,
+    height: 40,
+    backgroundColor: '#f5f5f5', // Match background color
+    borderTopLeftRadius: 20,
+    borderBottomLeftRadius: 20,
+    position: 'absolute',
+    right: -10, // Half inside, half outside
+    top: '50%',
+    transform: [{ translateY: -60 }], // Center vertically
+  },
+    btnView: { flexDirection: 'row', marginLeft: wp('18.4%'),bottom:wp('0.4243%') },
     textDetails2: {
         fontSize: wp('3.4%'),
         color: "#6F6C6C",
@@ -286,7 +324,7 @@ const styles = StyleSheet.create({
     textStyle: { marginTop: hp('0.9%') },
     subCard: {
         width: wp('11.2%'),
-        height: hp('1.6%'),
+        height: hp('1.9%'),
         borderRadius: wp('1.2%'),
         backgroundColor: '#060505',
         justifyContent: 'center',
@@ -315,7 +353,7 @@ const styles = StyleSheet.create({
     stylesCard: { flexDirection: 'column', paddingLeft: wp('6.3%') },
     dashStyle: { width: wp('0.2%'), height: hp('1.9%'), backgroundColor: '#6F6C6C', marginVertical: hp('0.2%') },
     dashView: { flexDirection: 'column', alignItems: 'center', marginHorizontal: wp('2.4%'), paddingTop: hp('0.5%') },
-    subView1: { padding: wp('2.4%'), flexDirection: 'row', alignItems: 'center' },
+    subView1: { padding: wp('0%'), flexDirection: 'row', alignItems: 'center' },
     main: { marginTop: hp('1.3995%') },
     headerStyle: { justifyContent: 'center', alignItems: 'center', marginTop: hp('13.1%') },
     textStyle: { fontSize: wp('3.9%'), lineHeight: hp('2.6%'), color: '#060505', fontWeight: '400' },
@@ -329,6 +367,10 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.2,
         shadowRadius: wp('1%'),
         elevation: 5,
+        marginTop:hp('1.6973%'),
+        justifyContent:'flex-start',
+        alignItems:'flex-start',
+        
     },
     backButton: {
         position: 'absolute',
@@ -393,9 +435,9 @@ const styles = StyleSheet.create({
     card: {
         width: wp('89.8%'),
         height: hp('15.3%'),
-        backgroundColor: '#FDFDFD',
+        backgroundColor: '#FFFFFF',
         opacity: 0.9,
-        shadowColor: '#000',
+        // shadowColor: '#000',
         shadowOffset: { width: 0, height: hp('0.2%') },
         shadowOpacity: 0.2,
         shadowRadius: wp('1%'),
@@ -458,4 +500,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ChristianPage1;
+export default ChristianPage2;

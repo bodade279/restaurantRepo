@@ -13,11 +13,14 @@ import Category from '../page/category/Category';
 import Coupons from '../page/coupons/Coupons'
 import ConfirmLocationPage from '../page/confirmLocation/ConfirmLocationpage'
 import PrivacyAndpolicy from '../page/privacyAndpolicy/PrivacyAndpolicy'
-import ChristianPage1 from '../page/ChristianPage1/ChristianPage1'
+import ChristianPage1 from '../page/christianPage1/ChristianPage1'
+import ChristianPage2 from '../page/christianPage2/ChristianPage2'
+import ChristianPage3 from '../page/christianPage3/ChristianPage3'
+
 const Routing =createStackNavigator();
 const RoutingPage = () => {
   return (
-    <Routing.Navigator initialRouteName='ChristianPage1'>
+    <Routing.Navigator initialRouteName='ChristianPage2'>
       <Routing.Screen name="InitialPage" component={InitialPage} options={{ headerShown: false }} />
       <Routing.Screen name="LoginPage" component={LoginPage} options={{ headerShown: false }} />
       <Routing.Screen name="OtpPage" component={OtpPage} options={{ headerShown: false }} />
@@ -31,7 +34,10 @@ const RoutingPage = () => {
       <Routing.Screen name="Category" component={Category} options={{ headerShown: false }} />
       <Routing.Screen name="Coupons" component={Coupons} options={{ headerShown: false }} />
       <Routing.Screen name="ConfirmLocationPage" component={ConfirmLocationPage} options={{ headerShown: false }} />
-      <Routing.Screen name="ChristianPage1" component={ChristianPage1} options={{ headerShown: false }} /><Routing.Screen name="PrivacyAndpolicy" component={PrivacyAndpolicy} options={{ headerShown: false }} />
+      <Routing.Screen name="ChristianPage1" component={ChristianPage1} options={{ headerShown: false }} />
+      <Routing.Screen name="PrivacyAndpolicy" component={PrivacyAndpolicy} options={{ headerShown: false }} />
+      <Routing.Screen name="ChristianPage2" component={ChristianPage2} options={{ headerShown: false }} />
+      <Routing.Screen name="ChristianPage3" component={ChristianPage3} options={{ headerShown: false }} />
 
       </Routing.Navigator>
   

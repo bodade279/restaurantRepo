@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     subView: {
         width: wp('89.8%'),
         height: hp('15.3%'),
-        backgroundColor: 'white',
+        backgroundColor: '#FDFDFD',
         opacity: 0.9,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: hp('0.2%') },
